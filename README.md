@@ -1,4 +1,4 @@
-# Work Day Scheduler Starter Code
+# Work Day Scheduler
 
 ## Purpose 
 Application that allows a user to save events for each hour of the day.
