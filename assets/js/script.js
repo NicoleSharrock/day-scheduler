@@ -1,5 +1,6 @@
 var today = moment().format('MMMM Do, YYYY');
 var $current = $('#currentDay');
+var saveBtn = $(".saveBtn")
 
 
 // current day displayed when open calender
@@ -7,26 +8,26 @@ $current.text(today)
 
 
 // loop over time blocks and change background colors 
-function timeBlockColor() {
-    var actualTime = moment().format();
 
-    $(".time-block").each(function () {
-        var actualHour = parseInt($(this).attr("id"));
-        console.log(actualHour); //each time-block
-
-        if (actualHour > actualTime) {
-            $(this).addClass(".future");
-        } else if (actualTime === actualTime) {
-            $(this).addClass(".present");
-        } else {
-            $(this).addClass(".past");
-        }
-    })
-};
-
+const timeBlocks = Array.from(document.getElementsByClassName('hour'));
+var currentTime = moment().format('HH');
+for (let i = 0; i < timeBlocks.length; i++) {
+    var timeBlockId = parseInt(timeBlocks[i].id);
+    var time = parseInt(currentTime);
+    if (timeBlockId < time) {
+        timeBlocks[i].classList.add('past');
+    }
+    if (timeBlockId > time) {
+        timeBlocks[i].classList.add('future');
+    }
+    if (timeBlockId === time) {
+        timeBlocks[i].classList.add('present');
+    }
+}
 
 
 //can enter an event, save to local storage, when page is refreshed events are saved
+
 
 $("#button9am").on("click", function () {
     var nineText = $("#comment9am").val();
@@ -38,6 +39,7 @@ function refresh_9() {
     var afterRefresh = localStorage.getItem("9");
     $("#comment9am").val(afterRefresh);
 };
+
 
 
 $("#button10am").on("click", function () {
@@ -130,7 +132,6 @@ function refresh_5() {
     $("#comment5pm").val(afterRefresh);
 };
 
-timeBlockColor();
 refresh_9();
 refresh_10();
 refresh_11();
@@ -141,3 +142,19 @@ refresh_3();
 refresh_4();
 refresh_5();
 
+// //  saves the data to local storage when save button is clicked
+// $('.saveBtn').each(function (index) {
+//     // event listener for save button
+//     $(this).on("click", function () {
+//         // targets the text area element.
+//         var taskText = $(this).prev().val();
+//         // saves it based on the index
+//         localStorage.setItem($(index), taskText);
+//     });
+// });
+
+// // for each text area element, it will load the data from local storage based on it's index.
+// $('textarea').each(function (index) {
+//     // gets the data from local storage based on the index if there is no data, it will display 'Event'.
+//     $(this).val(localStorage.getItem($(index)) || "");
+// });

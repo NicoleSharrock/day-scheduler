@@ -79,15 +79,15 @@ textarea {
 
 .past {
   background-color: gray;
-  columns: #ffffff;
+  color: #ffffff;
 }
 
 .present {
   background-color: rgb(209, 18, 18);
-  columns: #ffffff;
+  color: #ffffff;
 }
 
 .future {
   background-color: greenyellow;
-  columns: #ffffff;
+  color: #ffffff;
 }
