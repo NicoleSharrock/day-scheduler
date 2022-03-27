@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
     integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
   <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
   <title>Work Day Scheduler</title>
 </head>
 
@@ -22,9 +22,9 @@
   <div class="container">
 
     <!-- 9 am -->
-    <div class="input-group mb-3">
+    <div class="input-group mb-3 time-block">
       <div class="input-group-prepend row">
-        <span class="input-group-text hour">9AM</span>
+        <span class="input-group-text hour" id="9">9AM</span>
       </div>
       <textarea id="comment9am" value="" type="text" cols="100" rows="2"
         class="form-control description textarea"></textarea>
@@ -35,9 +35,9 @@
     </div>
 
     <!-- 10 am-->
-    <div class="input-group mb-3">
+    <div class="input-group mb-3 time-block">
       <div class="input-group-prepend row">
-        <span class="input-group-text hour">10AM</span>
+        <span class="input-group-text hour" id="10">10AM</span>
       </div>
       <textarea id="comment10am" value="" type="text" cols="100" rows="2"
         class="form-control description textarea"></textarea>
@@ -48,9 +48,9 @@
     </div>
 
     <!-- 11 am-->
-    <div class="input-group mb-3">
+    <div class="input-group mb-3 time-block">
       <div class="input-group-prepend row">
-        <span class="input-group-text hour">11AM</span>
+        <span class="input-group-text hour" id="11">11AM</span>
       </div>
       <textarea id="comment11am" value="" type="text" cols="100" rows="2"
         class="form-control description textarea"></textarea>
@@ -61,9 +61,9 @@
     </div>
 
     <!-- 12 am-->
-    <div class="input-group mb-3">
+    <div class="input-group mb-3 time-block">
       <div class="input-group-prepend row">
-        <span class="input-group-text hour">12PM</span>
+        <span class="input-group-text hour" id="12">12PM</span>
       </div>
       <textarea id="comment12pm" value="" type="text" cols="100" rows="2"
         class="form-control description textarea"></textarea>
@@ -74,9 +74,9 @@
     </div>
 
     <!-- 1 pm-->
-    <div class="input-group mb-3">
+    <div class="input-group mb-3 time-block">
       <div class="input-group-prepend row">
-        <span class="input-group-text hour">1PM</span>
+        <span class="input-group-text hour" id="13">1PM</span>
       </div>
       <textarea id="comment1pm" value="" type="text" cols="100" rows="2"
         class="form-control description textarea"></textarea>
@@ -87,9 +87,9 @@
     </div>
 
     <!-- 2 pm-->
-    <div class="input-group mb-3">
+    <div class="input-group mb-3 time-block">
       <div class="input-group-prepend row">
-        <span class="input-group-text hour">2PM</span>
+        <span class="input-group-text hour" id="14">2PM</span>
       </div>
       <textarea id="comment2pm" value="" type="text" cols="100" rows="2"
         class="form-control description textarea"></textarea>
@@ -100,9 +100,9 @@
     </div>
 
     <!-- 3 pm-->
-    <div class="input-group mb-3">
+    <div class="input-group mb-3 time-block">
       <div class="input-group-prepend row">
-        <span class="input-group-text hour">3PM</span>
+        <span class="input-group-text hour" id="15">3PM</span>
       </div>
       <textarea id="comment3pm" value="" type="text" cols="100" rows="2"
         class="form-control description textarea"></textarea>
@@ -113,9 +113,9 @@
     </div>
 
     <!-- 4 pm-->
-    <div class="input-group mb-3">
+    <div class="input-group mb-3 time-block">
       <div class="input-group-prepend row">
-        <span class="input-group-text hour">4PM</span>
+        <span class="input-group-text hour" id="16">4PM</span>
       </div>
       <textarea id="comment4pm" value="" type="text" cols="100" rows="2"
         class="form-control description textarea"></textarea>
@@ -126,9 +126,9 @@
     </div>
 
     <!-- 5 pm-->
-    <div class="input-group mb-3">
+    <div class="input-group mb-3 time-block">
       <div class="input-group-prepend row">
-        <span class="input-group-text hour">5PM</span>
+        <span class="input-group-text hour" id="17">5PM</span>
       </div>
       <textarea id="comment5pm" value="" type="text" cols="100" rows="2"
         class="form-control description textarea"></textarea>

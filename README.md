@@ -17,6 +17,11 @@ AS an employee with a busy schedule I want to add important events to a daily pl
 * Visual Studio Code
 * HTML
 * CSS
+* JQuery
+* Bootstrap 
+* Font Awesome
+* Moment.js
+* Google Fonts
 
 
 ## Deployable link 

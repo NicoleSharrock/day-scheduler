@@ -6,20 +6,27 @@ var $current = $('#currentDay');
 $current.text(today)
 
 
+// loop over time blocks and change background colors 
+function timeBlockColor() {
+    var actualTime = moment().format();
+
+    $(".time-block").each(function () {
+        var actualHour = parseInt($(this).attr("id"));
+        console.log(actualHour); //each time-block
+
+        if (actualHour > actualTime) {
+            $(this).addClass(".future");
+        } else if (actualTime === actualTime) {
+            $(this).addClass(".present");
+        } else {
+            $(this).addClass(".past");
+        }
+    })
+};
 
 
-// time blocks are color coded, color rows based on time
 
-
-//get current number of hours.
-
-
-// loop over time blocks
-
-// To check the time and add the classes for background indicators
-
-
-//can enter an event, save to local storage, when page is refreshed events are saved  
+//can enter an event, save to local storage, when page is refreshed events are saved
 
 $("#button9am").on("click", function () {
     var nineText = $("#comment9am").val();
@@ -123,7 +130,7 @@ function refresh_5() {
     $("#comment5pm").val(afterRefresh);
 };
 
-
+timeBlockColor();
 refresh_9();
 refresh_10();
 refresh_11();
@@ -133,3 +140,4 @@ refresh_2();
 refresh_3();
 refresh_4();
 refresh_5();
+
